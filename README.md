@@ -1,3 +1,5 @@
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/csc/Hanlon-Microkernel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Project Hanlon-Microkernel (v2.0.0)
 
 This is part of [Project Hanlon][hanlon] - the Microkernel is the in-memory
