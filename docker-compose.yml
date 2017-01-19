@@ -1,0 +1,11 @@
+---
+hnlmk:
+  image: "cscdock/hanlon-microkernel:3.0.1"
+  privileged: true
+  net: host
+  volumes:
+    - "/proc:/host-proc"
+    - "/dev:/host-dev"
+    - "/sys:/host-sys"
+    - "./tmp:/tmp"
+  command: tmp/entrypoint.sh
