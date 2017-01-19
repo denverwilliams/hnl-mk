@@ -1,11 +1,12 @@
-FROM gliderlabs/alpine
+FROM gliderlabs/alpine:edge
 
 ENV FACTER_VERSION 2.4.6
 
 # Install any dependencies needed
+# we may need ipmitool.... 
 RUN apk update && \
     apk add bash sed dmidecode ruby ruby-irb open-lldp util-linux open-vm-tools sudo && \
-    apk add lshw ipmitool --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && \
+    apk add lshw --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && \
     echo "install: --no-rdoc --no-ri" > /etc/gemrc && \
     gem install json_pure daemons && \
     gem install facter -v ${FACTER_VERSION} && \
